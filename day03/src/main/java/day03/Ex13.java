@@ -1,19 +1,18 @@
 package day03;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
-class Lec14 extends Thread{
+class Lec13 extends Thread{
 	int begin;
 	int end;
-	static AtomicInteger tot=new AtomicInteger();
+	static  int tot;
+//	static volatile int tot;
 	
-	public Lec14(int begin,int end) {
+	public Lec13(int begin,int end) {
 		this.begin=begin;
 		this.end=end;
 	}
 	
 	public static void plus(int su) {
-			tot.addAndGet(su);
+			tot=tot+su;
 	}
 	
 	@Override
@@ -26,16 +25,16 @@ class Lec14 extends Thread{
 }
 
 
-public class Ex14{
+public class Ex13{
 
 	public static void main(String[] args) throws InterruptedException {
-		Lec14 thr1=new Lec14(1, 500);
-		Lec14 thr2=new Lec14(501,1000);
+		Lec13 thr1=new Lec13(1, 500);
+		Lec13 thr2=new Lec13(501,1000);
 		thr1.start();
 		thr2.start();
 		thr1.join();
 		thr2.join();
-		System.out.println("tot:"+Lec14.tot);	///tot:500500
+		System.out.println("tot:"+Lec13.tot);	///tot:500500
 	}
 
 }
