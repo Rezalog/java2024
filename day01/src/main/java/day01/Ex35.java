@@ -15,8 +15,8 @@ public class Ex35 extends day01.etc.Lec22{
 		Lec02 me=new Lec02();
 		System.out.println(me.su1);
 		me.func01();
-//		com.bit2.Lec22 you;
-//		you=new com.bit2.Lec22();
+//		day01.etc.Lec22 you;
+//		you=new day01.etc.Lec22();
 //		System.out.println(you.su1);
 //		you.func02();
 		

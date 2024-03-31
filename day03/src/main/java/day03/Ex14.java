@@ -1,23 +1,19 @@
 package day03;
 
 
-class Lec16 extends Thread{
+class Lec14 extends Thread{
 	int begin;
 	int end;
-	static int tot;
-	static Object key=new Object();
+	static  int tot;
+//	static volatile int tot;
 	
-	public Lec16(int begin,int end) {
+	public Lec14(int begin,int end) {
 		this.begin=begin;
 		this.end=end;
 	}
 	
-	public void plus(int su) {
-		
-		synchronized (key) {
+	public static void plus(int su) {
 			tot=tot+su;
-		}
-		
 	}
 	
 	@Override
@@ -30,16 +26,16 @@ class Lec16 extends Thread{
 }
 
 
-public class Ex16{
+public class Ex14{
 
 	public static void main(String[] args) throws InterruptedException {
-		Lec16 thr1=new Lec16(1, 500);
-		Lec16 thr2=new Lec16(501,1000);
+		Lec14 thr1=new Lec14(1, 500);
+		Lec14 thr2=new Lec14(501,1000);
 		thr1.start();
 		thr2.start();
 		thr1.join();
 		thr2.join();
-		System.out.println("tot:"+Lec16.tot);	///tot:500500
+		System.out.println("tot:"+Lec14.tot);	///tot:500500
 	}
 
 }
