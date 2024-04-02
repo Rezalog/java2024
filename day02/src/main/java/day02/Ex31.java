@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Ex31 {
     	public static void main(String[] args) {
-		File file=new File("./");
+		File file=new File(".\\");
 
 		System.out.println("유무?"+file.exists());
 		if(file.exists()) {

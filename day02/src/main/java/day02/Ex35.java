@@ -10,7 +10,7 @@ public class Ex35 {
     	public static void main(String[] args) {
 		String msg="한";
 		byte[] arr=msg.getBytes();
-		File f=new File("Lec16.bin");
+		File f=new File("test01.bin");
 		OutputStream os;
 		try {
 			if(!f.exists())f.createNewFile();

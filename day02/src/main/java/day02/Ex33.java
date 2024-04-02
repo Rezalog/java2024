@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Ex33 {
     	public static void main(String[] args) {
-		File f=new File("test02");
+		File f=new File("./temp01");
 		if(f.exists()) {
 			boolean boo=f.delete();
 			

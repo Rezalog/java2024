@@ -8,12 +8,17 @@ import java.io.InputStream;
 
 public class Ex36 {
     	public static void main(String[] args) {
-		File f=new File("Lec16.bin");
+		File f=new File("test01.bin");
 		InputStream is;
 		if(f.exists()) {
 			try {
 				is=new FileInputStream(f);
 				int su=-1;
+//				System.out.println(is.read());
+//				System.out.println(is.read());
+//				System.out.println(is.read());
+//				System.out.println(is.read());
+//				System.out.println(is.read());
 				while(true) {
 					su=is.read();
 					if(su==-1)break;

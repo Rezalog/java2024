@@ -16,9 +16,9 @@ public class Ex13 {
 //		}
 		long before=System.currentTimeMillis();
 		//4691
-		java.util.ArrayList arr=new ArrayList();
+//		java.util.ArrayList arr=new ArrayList();
 		//6160
-//		java.util.LinkedList arr=new LinkedList();
+		java.util.LinkedList arr=new LinkedList();
 		for(int i=0; i<10000000; i++)
 		arr.add(i);
 		for(int i=0; i<arr.size(); i++) {

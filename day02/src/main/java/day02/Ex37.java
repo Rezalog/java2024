@@ -25,7 +25,7 @@ public class Ex37 {
 				while(true) {
 					int su=is.read(buf);
 					if(su==-1)break;
-					os.write(buf);
+					os.write(buf,0,su);
 				}
 				os.close();
 				is.close();
